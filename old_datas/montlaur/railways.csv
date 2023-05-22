@@ -1,4 +1,0 @@
-X,Y,osm_id,operator,ref,name,railway,service,ref:FR:SNCF_Reseau,maxspeed,importance,passenger_lines,detail,electrified,frequency,gauge,voltage,usage,railway:track_ref
-1.56445365,43.4840471,204109439,SNCF,640000,Ligne de Bordeaux à Sète,rail,,"640000,1,V2,0.000,406.117",150,national,2,track,contact_line,0,1435,1500,main,2
-1.56449435,43.48407585,204105260,SNCF,640000,Ligne de Sète à Toulouse,rail,,"640000,1,V1,0.000,406.117",150,national,2,track,contact_line,0,1435,1500,main,1
-1.5614339,43.4872196,204107263,SNCF Réseau,640000,,rail,crossover,"640000,1,J2730,273.063,273.194",,,,track,contact_line,0,1435,1500,,J2730

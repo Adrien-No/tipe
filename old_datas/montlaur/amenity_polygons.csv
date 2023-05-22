@@ -1,7 +1,0 @@
-X,Y,osm_id,historic,name,landuse,access,leisure,amenity,religion,denomination,building,wheelchair,fee,parking,operator:type,ref:UAI,school:FR
-1.55896430258559,43.4917847072376,23866661,castle,Château des Barrots,commercial,,,,,,,,,,,,
-1.56552771273603,43.4848418504217,923035707,,,,yes,playground,,,,,no,,,,,
-1.57069567513461,43.4878869991953,117696063,,Église Saint-Lautier,,,,place_of_worship,christian,catholic,yes,,,,,,
-1.56913852395329,43.4891318715464,123202392,,,,yes,,parking,,,,,no,surface,,,
-1.57092374677552,43.4885118048451,117808532,,Aire de Jeux,,yes,playground,,,,,,,,,,
-1.56964511312492,43.4887536103712,117805635,,École primaire publique Saint-Lautier,,,,school,,,,,,,public,0310697P,primaire
