@@ -20,9 +20,9 @@ type graph = {
 
 (** Le type obtenu après mise à l'échelle dans la fenêtre Graphics.*)
 type int_sommet = {
-  id : int;
-  x : int;
-  y : int;
+  i_id : int;
+  i_x : int;
+  i_y : int;
 }
 
 type int_graph = {

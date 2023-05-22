@@ -25,7 +25,7 @@ let print_route (route:route) = Printf.printf "(cible = %i, length = %f, voies =
 
 let print_intersection (node:intersection) : unit = Printf.printf "(id = %i, x = %f, y = %f) " node.id node.x node.y
 
-let print_int_sommet (s:int_sommet) = Printf.printf "(id = %i, x = %i, y = %i)" s.id s.x s.y
+let print_int_sommet (s:int_sommet) = Printf.printf "(id = %i, x = %i, y = %i)" s.i_id s.i_x s.i_y
 
 let print_graph (graph:graph) : unit =
   Printf.printf "sommets : [|"; Array.iter print_intersection graph.sommets; Printf.printf "|]\n";
@@ -33,7 +33,7 @@ let print_graph (graph:graph) : unit =
 
 let print_int_graph (graph:int_graph) : unit =
   Printf.printf "sommets : [|"; Array.iter print_int_sommet graph.i_sommets; Printf.printf "|]\n";
-  Array.iter (fun (sommet:int_sommet) -> Printf.printf "%i\n[|\n" sommet.id; List.iter print_route graph.i_ladj.(Hashtbl.find graph.i_id_sommets sommet.id)) graph.i_sommets; Printf.printf "|]\n"
+  Array.iter (fun (sommet:int_sommet) -> Printf.printf "%i\n[|\n" sommet.i_id; List.iter print_route graph.i_ladj.(Hashtbl.find graph.i_id_sommets sommet.i_id)) graph.i_sommets; Printf.printf "|]\n"
 (* ================================================================ get_graph ================================================================ *)
 
 let get_nodes path : intersection array =
