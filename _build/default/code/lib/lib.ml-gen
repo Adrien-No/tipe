@@ -3,6 +3,9 @@
 (** @canonical Lib.Read *)
 module Read = Lib__Read
 
+(** @canonical Lib.Read_try_to_remove_useless_nodes *)
+module Read_try_to_remove_useless_nodes = Lib__Read_try_to_remove_useless_nodes
+
 (** @canonical Lib.Show *)
 module Show = Lib__Show
 
