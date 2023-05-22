@@ -1,0 +1,19 @@
+- donner un
+
+objectif 1ere anne : prendre le temps pour trouver un sujet et commencer les manips / recherche pendant les vacances d'été (la 2e annee passe vite, bcp de choses à faire).
+
+modalité de l'exam : 15 mins de presentation / 15 mins de questions avec 2 examinateurs formés sur le sujet de TIPE. 15 mins c'est très court pour présenter tout ça.
+-> faut que le jury se fasse une idée de nos recherches.
+-> digeste
+
+- structure de TIPEs bien réussi en info : on part d'un probleme typique , essaye de metr en place une simulation pour avoir nos propres donneees et on compare avec celles deja trouvees (maths)
+
+- autre type : problème tres difficile (pas de sn autre que force brute ) -> trouver des solutions pas completes mais qui marchent bien
+
+- 3e type (marche moins bien) : on prend un domaine et on ex (ex compression de donnée)
+
+- pas chercher trop longtemps sur internet (retard le moment où on fait de la science.)
+
+*) démarche personnelle expérimentale.
+
+- échéances pendant la 2e année (janvier)

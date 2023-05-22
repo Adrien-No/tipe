@@ -1,0 +1,33 @@
+opam-version: "2.0"
+added: [
+  "doc/csv" {"D"}
+  "doc/csv/CHANGES.md" {"F:S890T1684661639.66"}
+  "doc/csv/LICENSE.md" {"F:S27357T1684661639.66"}
+  "doc/csv/README.md" {"F:S1556T1684661639.66"}
+  "lib/csv" {"D"}
+  "lib/csv/META" {"F:S208T1684661639.66"}
+  "lib/csv/csv.a" {"F:S147654T1684661639.66"}
+  "lib/csv/csv.cma" {"F:S221669T1684661639.66"}
+  "lib/csv/csv.cmi" {"F:S14319T1684661639.66"}
+  "lib/csv/csv.cmt" {"F:S353986T1684661639.66"}
+  "lib/csv/csv.cmti" {"F:S94392T1684661639.66"}
+  "lib/csv/csv.cmx" {"F:S21988T1684661639.66"}
+  "lib/csv/csv.cmxa" {"F:S2152T1684661639.66"}
+  "lib/csv/csv.cmxs" {"F:S155232T1684661639.66"}
+  "lib/csv/csv.ml" {"F:S37006T1684661639.66"}
+  "lib/csv/csv.mli" {"F:S22030T1684661639.66"}
+  "lib/csv/csv__.cmi" {"F:S272T1684661639.66"}
+  "lib/csv/csv__.cmt" {"F:S2786T1684661639.66"}
+  "lib/csv/csv__.cmx" {"F:S130T1684661639.66"}
+  "lib/csv/csv__.ml" {"F:S152T1684661639.66"}
+  "lib/csv/csv__Csv_row.cmi" {"F:S9444T1684661639.66"}
+  "lib/csv/csv__Csv_row.cmt" {"F:S74048T1684661639.66"}
+  "lib/csv/csv__Csv_row.cmx" {"F:S3823T1684661639.66"}
+  "lib/csv/csv__Csv_utils.cmi" {"F:S18850T1684661639.66"}
+  "lib/csv/csv__Csv_utils.cmt" {"F:S105504T1684661639.66"}
+  "lib/csv/csv__Csv_utils.cmx" {"F:S15503T1684661639.66"}
+  "lib/csv/csv_row.ml" {"F:S3358T1684661639.66"}
+  "lib/csv/csv_utils.ml" {"F:S4782T1684661639.66"}
+  "lib/csv/dune-package" {"F:S1384T1684661639.66"}
+  "lib/csv/opam" {"F:S984T1684661639.66"}
+]

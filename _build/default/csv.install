@@ -1,0 +1,9 @@
+lib: [
+  "_build/install/default/lib/csv/META"
+  "_build/install/default/lib/csv/dune-package"
+  "_build/install/default/lib/csv/opam"
+]
+bin: [
+  "_build/install/default/bin/code"
+  "_build/install/default/bin/tipe"
+]

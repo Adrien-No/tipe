@@ -1,0 +1,40 @@
+(lang dune 3.7)
+(name merlin)
+(version 4.7-413)
+(sections
+ (lib .)
+ (bin ../../bin)
+ (share ../../share/merlin)
+ (share_root ../../share)
+ (doc ../../doc/merlin))
+(files
+ (lib (META dune-package opam))
+ (bin (ocamlmerlin ocamlmerlin-server))
+ (share
+  (vim/autoload/ctrlp/locate.vim
+   vim/autoload/ctrlp/outline.vim
+   vim/autoload/merlin.py
+   vim/autoload/merlin.vim
+   vim/autoload/merlin_find.vim
+   vim/autoload/merlin_type.vim
+   vim/autoload/merlin_visual.vim
+   vim/autoload/neomake/makers/ft/ocaml.vim
+   vim/doc/merlin.txt
+   vim/ftdetect/merlin.vim
+   vim/ftplugin/merlin.vim
+   vim/ftplugin/ocaml.vim
+   vim/ftplugin/omlet.vim
+   vim/ftplugin/reason.vim
+   vim/plugin/merlin.vim
+   vim/syntax/merlin.vim
+   vim/syntax_checkers/ocaml/merlin.vim
+   vim/syntax_checkers/omlet/merlin.vim))
+ (share_root
+  (emacs/site-lisp/merlin-ac.el
+   emacs/site-lisp/merlin-cap.el
+   emacs/site-lisp/merlin-company.el
+   emacs/site-lisp/merlin-iedit.el
+   emacs/site-lisp/merlin-imenu.el
+   emacs/site-lisp/merlin-xref.el
+   emacs/site-lisp/merlin.el))
+ (doc (CHANGES.md LICENSE README.md)))

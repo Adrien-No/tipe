@@ -1,0 +1,9 @@
+X,Y,osm_id,operator,name,public_transport,railway,ref,highway,train,uic_ref,ref:FR:uic8,bus,shelter,wheelchair,bench,tactile_paving,ref:FR:Tisseo,ref:FR:aec31
+1.5777732,43.4751422,2141239751,SNCF,Montlaur,stop_position,stop,,,yes,8761820,87 618 207,,,,,,,
+1.5777987,43.4751709,247991633,SNCF,Montlaur,stop_position,stop,,,yes,8761820,87 618 207,,,,,,,
+1.5717688,43.4821556,7873657910,,Les Canavères,stop_position,,,,,,,yes,,,,,,
+1.5725452,43.4813864,7873657911,,Les Canavères,stop_position,,,,,,,yes,,,,,,
+1.5691336,43.4885402,7873657912,,Village Montlaur,stop_position,,,,,,,yes,,,,,,
+1.569242,43.488554,2216410789,,Village Montlaur,platform,,25381,bus_stop,,,,yes,yes,yes,yes,no,25381,
+1.5689173,43.488947,7873657913,,Village Montlaur,stop_position,,,,,,,yes,,,,,,
+1.5688463,43.4889984,1718620331,,Village Montlaur,platform,,25380,bus_stop,,,,yes,no,yes,no,no,25380,38403

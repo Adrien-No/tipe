@@ -1,0 +1,7 @@
+OPAM_SWITCH_PREFIX	=	/home/adriroot/Nextcloud/tipe/_opam	Prefix\ of\ the\ current\ opam\ switch
+CAML_LD_LIBRARY_PATH	=	/usr/local/lib/ocaml/4.13.1/stublibs:/usr/lib/ocaml/stublibs	Updated\ by\ package\ ocaml
+CAML_LD_LIBRARY_PATH	+=	/home/adriroot/Nextcloud/tipe/_opam/lib/stublibs	Updated\ by\ package\ ocaml
+OCAML_TOPLEVEL_PATH	=	/home/adriroot/Nextcloud/tipe/_opam/lib/toplevel	Updated\ by\ package\ ocaml
+PKG_CONFIG_PATH	+=	/home/adriroot/Nextcloud/tipe/_opam/lib/pkgconfig	Updated\ by\ package\ conf-pkg-config
+MANPATH	=:	/home/adriroot/Nextcloud/tipe/_opam/man	Current\ opam\ switch\ man\ dir
+PATH	=+=	/home/adriroot/Nextcloud/tipe/_opam/bin	Binary\ dir\ for\ opam\ switch\ /home/adriroot/Nextcloud/tipe

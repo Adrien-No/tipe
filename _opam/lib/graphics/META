@@ -1,0 +1,7 @@
+version = "5.1.2"
+description = "Portable drawing primitives"
+requires = ""
+archive(byte) = "graphics.cma"
+archive(native) = "graphics.cmxa"
+plugin(byte) = "graphics.cma"
+plugin(native) = "graphics.cmxs"

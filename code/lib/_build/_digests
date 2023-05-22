@@ -1,0 +1,5 @@
+"Rule: ocaml: cmx* & o* -> native (%=read )": "zd\015Z%\200\022\241\156\142\003\190u\159J\254"
+"Rule: ocaml dependencies ml (%=read )": "F\146`2\243\215y\249\214\021*t\217\203E\170"
+"Rule: ocaml: ml -> cmo & cmi (%=read )": "\155\156wa\2229\004o\132:\238\203\226\211\225W"
+"Rule: ocaml: ml & cmi -> cmx & o (%=read )": "\n\131{\024\217\203f\192\192\144\139\215\162\154\179\255"
+"Resource: /home/adriroot/Nextcloud/tipe/code/lib/read.ml": "\216\169\235\224\241\147\149\"1\018pyNtM="

@@ -1,0 +1,10 @@
+### Starting build.
+# Target: read.ml.depends, tags: { extension:ml, file:read.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules read.ml > read.ml.depends
+# Target: read.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:read.cmo, file:read.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I /home/adriroot/Nextcloud/tipe/_opam/lib/bytes -I /home/adriroot/Nextcloud/tipe/_opam/lib/csv -o read.cmo read.ml
+# Target: read.cmx, tags: { compile, extension:cmx, extension:ml, file:read.cmx, file:read.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I /home/adriroot/Nextcloud/tipe/_opam/lib/bytes -I /home/adriroot/Nextcloud/tipe/_opam/lib/csv -o read.cmx read.ml
+# Target: read.native, tags: { dont_link_with, extension:native, file:read.native, link, native, ocaml, program, quiet }
+/usr/bin/ocamlopt.opt -I /home/adriroot/Nextcloud/tipe/_opam/lib/bytes -I /home/adriroot/Nextcloud/tipe/_opam/lib/csv /home/adriroot/Nextcloud/tipe/_opam/lib/csv/csv.cmxa read.cmx -o read.native
+# Compilation successful.

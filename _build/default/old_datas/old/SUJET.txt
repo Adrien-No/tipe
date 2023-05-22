@@ -1,0 +1,30 @@
+IDEES DE THEMES
+
+
+* PB TRES DIFFICILE
+-------------------
+
+info théorique
+     -> théorie de la complexité : travail de recherche (optimisation / baisse de complexité) sur un algo de classe NP-complet / NP-difficile
+
+     ->
+
+
+
+
+* MISE EN PLACE D'UN SYSTEME INNOVANT / AMELIORANT LE QUOTIDIEN
+---------------------------------------------------------------
+
+
+* TOURNEE DES BARS (samedi soir)
+--------------------------------
+
+- application permettant de tracer un chemin à un utilisateur à un endroit donné suivant plusieurs parametres :
+Ainsi il faut croiser des données
+
+-> il faut visiter le maximum de bars
+
+- ville initiale
+- position (voyageur de commerce)
+- heure de fermeture (il faut rester un certain temps pour chaque consommations prévue)
+- graduation suivant les préférences d'alcool

@@ -1,0 +1,66 @@
+(lang dune 3.7)
+(name graphics)
+(version 5.1.2)
+(sections (lib .) (libexec .) (doc ../../doc/graphics) (stublibs ../stublibs))
+(files
+ (lib
+  (META
+   dune-package
+   graphics.a
+   graphics.cma
+   graphics.cmi
+   graphics.cmt
+   graphics.cmti
+   graphics.cmx
+   graphics.cmxa
+   graphics.ml
+   graphics.mli
+   graphicsX11.cmi
+   graphicsX11.cmt
+   graphicsX11.cmti
+   graphicsX11.cmx
+   graphicsX11.ml
+   graphicsX11.mli
+   libgraphics_stubs.a
+   opam))
+ (libexec (graphics.cmxs))
+ (doc (CHANGES.md LICENSE README.md))
+ (stublibs (dllgraphics_stubs.so)))
+(library
+ (name graphics)
+ (kind normal)
+ (synopsis "Portable drawing primitives")
+ (archives (byte graphics.cma) (native graphics.cmxa))
+ (plugins (byte graphics.cma) (native graphics.cmxs))
+ (foreign_objects
+  color.o
+  draw.o
+  dump_img.o
+  events.o
+  fill.o
+  image.o
+  make_img.o
+  open.o
+  point_col.o
+  sound.o
+  subwindow.o
+  text.o)
+ (foreign_archives (archives (for all) (files libgraphics_stubs.a)))
+ (native_archives graphics.a)
+ (modes byte native)
+ (modules
+  (unwrapped
+   (module
+    (obj_name graphics)
+    (visibility public)
+    (source
+     (path Graphics)
+     (intf (path graphics.mli))
+     (impl (path graphics.ml))))
+   (module
+    (obj_name graphicsX11)
+    (visibility public)
+    (source
+     (path GraphicsX11)
+     (intf (path graphicsX11.mli))
+     (impl (path graphicsX11.ml)))))))
