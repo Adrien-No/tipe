@@ -34,12 +34,47 @@ let get_int_graph (g:graph) dims_sommets : int_graph =
   let (ladj:i_route list array) = Array.map (fun l -> List.map (fun (r:route) -> {i_cible=r.cible;i_poid=weigth r}) l) g.ladj in
   {i_sommets=i_sommets;i_id_sommets=g.id_sommets;i_ladj=ladj}
 
-let draw_graph_loop g _ : unit =
+let find_sommet (s:int_sommet) : unit =
+  if 1500 < s.i_x && s.i_x < size_x() && s.i_y < 100 then
+    begin
+      Printf.printf "un des sommets recherché : (%i,%i)\n" s.i_x s.i_y;
+      set_color red
+    end
 
-  open_graph "";
-  (* set_line_width largeur_aretes; *) (* on a défini la largeur des aretes dans la boucle array/list de draw_edges() *)
-  let dims_sommets = dimensions_sommets g in
-  let g = get_int_graph g dims_sommets in
+let draw_edge g sens_direct (i_x:int) i_y =
+  (* i_x : indice dans g.i_sommets du sommet source *)
+  (* i_y : indice dst *)
+
+  (* Printf.printf "i_x = %i, i_y = %i\n" i_x i_y; *)
+  let xx,xy,yx,yy = g.i_sommets.(i_x).i_x, g.i_sommets.(i_x).i_y, g.i_sommets.(i_y).i_x, g.i_sommets.(i_y).i_y in
+  if not (sens_direct.(i_x).(i_y)) then
+    begin
+      set_color couleur_sens_direct;
+      moveto xx (xy+decalage_double_sens);
+      lineto yx (yy+decalage_double_sens);
+      sens_direct.(i_y).(i_x) <- true
+    end
+  else
+    begin
+      set_color couleur_sens_retour;
+      moveto xx (xy-decalage_double_sens);
+      lineto yx (yy-decalage_double_sens)
+    end
+
+let draw_edges g =
+  let sens_direct = Array.make_matrix (Array.length g.i_sommets) (Array.length g.i_sommets) false in
+  Array.iteri (fun i_x l ->
+      List.iter (draw_edge g sens_direct i_x)
+        (List.map
+           (fun (route:i_route) ->
+              (* Hashtbl.find g.i_id_sommets route.cible *)
+              set_line_width (compute_largeur route.i_poid);
+              Hashtbl.find g.i_id_sommets route.i_cible
+           )
+           l)
+    ) g.i_ladj
+
+let draw_graph (g:int_graph) : unit =
 
   let draw_sommet (s:int_sommet) : unit =
     (* Printf.printf "avant :(%f,%f)\n" s.x s.y; *)
@@ -49,45 +84,29 @@ let draw_graph_loop g _ : unit =
     (* g.sommets.(Hashtbl.find g.id_sommets s.id).y <- y; *)
     (* Printf.printf "point aux coordonées (%i,%i)\n" s.i_x s.i_y; *)
     (* plot x y *)
+    set_color black;
+    find_sommet s;
     fill_circle s.i_x s.i_y rayon_sommet;
     draw_circle s.i_x s.i_y rayon_sommet
   in
-  let draw_edges () =
-    let sens_direct = Array.make_matrix (Array.length g.i_sommets) (Array.length g.i_sommets) false in
-    let draw_edge i_x i_y =
-      (* i_x : indice dans g.i_sommets du sommet source *)
-      (* i_y : indice dst *)
-
-      (* Printf.printf "i_x = %i, i_y = %i\n" i_x i_y; *)
-      let xx,xy,yx,yy = g.i_sommets.(i_x).i_x, g.i_sommets.(i_x).i_y, g.i_sommets.(i_y).i_x, g.i_sommets.(i_y).i_y in
-      if not (sens_direct.(i_x).(i_y)) then
-        begin
-          set_color couleur_sens_direct;
-          moveto xx (xy+decalage_double_sens);
-          lineto yx (yy+decalage_double_sens);
-          sens_direct.(i_y).(i_x) <- true
-        end
-      else
-        begin
-          set_color couleur_sens_retour;
-          moveto xx (xy-decalage_double_sens);
-          lineto yx (yy-decalage_double_sens)
-        end
-    in
-    Array.iteri (fun i_x l ->
-        List.iter (draw_edge i_x)
-          (List.map
-             (fun (route:i_route) ->
-                (* Hashtbl.find g.i_id_sommets route.cible *)
-                set_line_width (compute_largeur route.i_poid);
-                Hashtbl.find g.i_id_sommets route.i_cible
-             )
-          l)
-      ) g.i_ladj;
-  in
-  draw_edges();
+  draw_edges g;
   set_color black;
-  Array.iter draw_sommet g.i_sommets;
-  (* Printf.printf "(%i,%i)\n" (size_x()) (size_y()); *)
-  (* while true do () done *)
-  let _ = read_key() in ()
+  Array.iter draw_sommet g.i_sommets
+(* Printf.printf "(%i,%i)\n" (size_x()) (size_y()); *)
+(* while true do () done *)
+
+let draw_path (g:int_graph) (l:int_sommet list) : unit =
+
+  (* let get_edge (x:int_sommet) (y:int_sommet) : i_route = *)
+  (*   let res = ref None in *)
+  (*   Array.iteri (fun i_x l -> List.iter (fun (e:i_route) -> if x = g.i_sommets.(Hashtbl.find g.i_id_sommets i_x) && g.i_sommets.(Hashtbl.find g.i_id_sommets e.cible) = y then begin Printf.printf "arete trouvee"; res := Some e end) l)  g.i_ladj; *)
+  (*   match !res with *)
+  (*     None -> failwith "arete non trouvee" *)
+  (*   | Some e -> e *)
+  (* in *)
+
+  (* attention sens de lecture de la liste *)
+  let _ = List.fold_left (fun (x:int_sommet) y -> if x <> List.hd l then begin draw_edge g (Array.make_matrix (Array.length g.i_sommets) (Array.length g.i_sommets) false)(Hashtbl.find g.i_id_sommets x.i_id) (Hashtbl.find g.i_id_sommets y.i_id)end; y) (List.hd l) l in ()
+
+  let draw_loop () =
+    let _ = read_key() in ()

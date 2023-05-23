@@ -23,9 +23,9 @@ let load path file = Csv.load_in (open_in(path^file)) |> Array.of_list
 
 let print_route (route:route) = Printf.printf "(cible = %i, length = %f, voies = %i)\n" route.cible route.length route.voies
 
-let print_intersection (node:intersection) : unit = Printf.printf "(id = %i, x = %f, y = %f) " node.id node.x node.y
+let print_intersection (node:intersection) : unit = Printf.printf "(id = %i, x = %f, y = %f)\n" node.id node.x node.y
 
-let print_int_sommet (s:int_sommet) = Printf.printf "(id = %i, x = %i, y = %i)" s.i_id s.i_x s.i_y
+let print_int_sommet (s:int_sommet) = Printf.printf "(id = %i, x = %i, y = %i)\n" s.i_id s.i_x s.i_y
 
 let print_i_route (route:i_route) = Printf.printf "(cible = %i, weigth = %i)\n" route.i_cible route.i_poid
 

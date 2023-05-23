@@ -26,13 +26,13 @@ type int_sommet = {
 }
 
 type i_route = {
-  i_cible : int;
+  i_cible : int; (* id du sommet ciblé *)
   i_poid : int;
 }
 
 type int_graph = {
   i_sommets : int_sommet array;
-  i_id_sommets : (int,int) Hashtbl.t; (* l'entier donné est l'id du sommet de destination *)
+  i_id_sommets : (int,int) Hashtbl.t; (*prend en argument l'id et renvoie l'indice dans i_sommets*)                        (* l'entier donné est l'id du sommet de destination *)
   i_ladj : i_route list array;
 }
 
